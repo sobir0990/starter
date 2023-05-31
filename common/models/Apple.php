@@ -107,7 +107,7 @@ class Apple extends ActiveRecord
         }
 
         if ($this->size === 0) {
-            return Yii::$app->session->setFlash('error', 'tugadi');
+            return Yii::$app->session->setFlash('error', 'size 0');
         }
 
         if ($this->status === self::STATUS_ON_GROUND and time() >= strtotime($this->fall_date) + 5 * 3600) {
